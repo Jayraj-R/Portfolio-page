@@ -1,22 +1,24 @@
 import React from 'react'
 import { Tween } from "react-gsap";
 import { Controller, Scene } from "react-scrollmagic";
-import { makeStyles, Typography, Grid, Paper } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 import WorkProjects from './WorkProjects';
 import phc from '../media/phc.jpg'
 import weather from '../media/weather.jpg'
 import ttt from '../media/ttt.png'
+import jaz from '../media/jaz.png'
 
 const useStyles = makeStyles({
     work:{
         position: "relative",
-        zIndex: "3"
+        zIndex: "3",
+        backgroundColor: "#FEF9EE",
     },
     underline:{
       position:"relative",
-      top:-40,
+      top:-35,
       marginBottom:-10,
-      backgroundColor:"red",
+      backgroundColor:"#00C9A9",
       border: "none",
       height:"2px"
     },
@@ -38,12 +40,19 @@ const useStyles = makeStyles({
         {
             id:2,
             title:"Weather App",
-            caption:"A react based application to fetch and display weather information of the required city.",
+            caption:"A react application to fetch and display weather information of the required city.",
             src:weather,
             link:"https://jayraj-r.github.io/weather-app/"
         },
         {
             id:3,
+            title:"Jazbaat",
+            caption:"Official website for a IIIT Jabalpur's college based drama club - Jazbaat.",
+            src:jaz,
+            link:"https://jayraj-r.github.io/Jazbaat/"
+        },
+        {
+            id:4,
             title:"Tic Tac Toe",
             caption:"A single player classic Tic-Tac-Toe game simulation. Make a triplet to win.",
             src:ttt,
@@ -57,7 +66,7 @@ const useStyles = makeStyles({
             <Grid container xs={12} justify="center" align="center">
                 <Controller>
                 <Scene
-                    indicators={true}
+                    indicators={false}
                     reverse={true}
                     duration={250}
                     offset={-150}
@@ -67,14 +76,14 @@ const useStyles = makeStyles({
                     staggerTo={{  visibility: "visible", opacity: 1 }}
                     stagger={1}
                     >
-                    <Typography  variant="h2" style={{ letterSpacing: 5}}>
+                    <Typography variant="h1" style={{fontFamily: 'Montserrat', fontWeight:700}} >
                         Work
                     </Typography>
                         
                     {/* Underline */}
                     <Controller>
                         <Scene
-                        indicators={true}
+                        indicators={false}
                         reverse={true}
                         duration={80}
                         offset={-140}

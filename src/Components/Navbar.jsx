@@ -6,18 +6,17 @@ import {
   IconButton,
   Button,
   Hidden,
-  Avatar,
-  Grid
+  Grid,
+  Typography
 } from "@material-ui/core";
-import {ThemeProvider} from '@material-ui/core/styles'
 import { makeStyles } from "@material-ui/core";
 import Sidebar from "./Sidebar";
 import '../App.css';
 
 const useStyles = makeStyles({
-    navbar:{
-        borderBottom: "5px solid #00C9A9"
-    },
+  navbar:{
+    borderBottom: "5px solid #00C9A9",
+  },
   navbarDisplayFlex: {
     display: `flex`,
     justifyContent: `space-between`
@@ -46,6 +45,11 @@ const useStyles = makeStyles({
   links:{
     textDecoration: "none",
     color:"#FEF9EE"
+  },
+  logo:{
+    position:"relative",
+    top:"50%",
+    transform:"translateY(-50%)"
   }
 });
 
@@ -53,40 +57,41 @@ const Navbar = () => {
   const classes = useStyles();
     
   return (
-    <ThemeProvider>
         
         <AppBar position="fixed">
         <Toolbar className={classes.navbar}>
             <Container maxWidth="xl" className={classes.navbarDisplayFlex}>
-            <IconButton edge="start" color="inherit" aria-label="home">
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-            </IconButton>
+            <a  href="#start" className={classes.links}>
+              <Typography variant="h3" color="secondary" className={classes.logo}  style={{fontWeight:700}}>
+                JR
+              </Typography>
+            </a>
             <Hidden smDown>
                 <Grid className={classes.navbarButton} justify="flex-end">
                     <a href="#about" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <span style={{ letterSpacing: 5}}>
+                        <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700}}>
                         About
                           <hr className={classes.underline}/>
-                        </span>
+                        </Typography>
                       </Button>
                     </a>
 
                     <a href="#work" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <span style={{ letterSpacing: 5}}>
+                        <Typography style={{ letterSpacing: 3, fontWeight:700}}>
                         Work
                           <hr className={classes.underline}/>
-                        </span>
+                        </Typography>
                       </Button>
                     </a>
 
                     <a href="#contact" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <span style={{ letterSpacing: 5}}>
+                        <Typography style={{ letterSpacing: 3, fontWeight:700}}>
                         Contact
                           <hr className={classes.underline}/>
-                        </span>
+                        </Typography>
                       </Button>
                     </a>
                 </Grid>
@@ -97,7 +102,6 @@ const Navbar = () => {
             </Container>
         </Toolbar>
         </AppBar>
-    </ThemeProvider>
   );
 };
 

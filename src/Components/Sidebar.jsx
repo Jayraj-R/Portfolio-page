@@ -2,27 +2,34 @@ import {
     Drawer,
     IconButton,
     Button,
-    Grid
+    Grid,
+    Typography
   } from "@material-ui/core";
   import { makeStyles } from "@material-ui/core/styles";
   import * as React from "react";
   import { useState } from "react";
-  
+  import MenuIcon from '@material-ui/icons/Menu';
+
   const useStyles = makeStyles({
       paper:{
-        backgroundColor:"#605F5D"
+        backgroundColor:"#605F5D",
+        textAlign:"center"
       },
       list:{
         display:"flex",
         flexDirection:"column",
-        width: 150,
-        marginTop:40
+        width: "100%",
+        marginTop:40,
       },
       links:{
         textDecoration: "none",
         color:"#FEF9EE"
+      },
+      underline:{
+        position:"relative",
+        top:"-0.8em",
+        color:"#FEF9EE"
       }
-
   });
   
   const Sidebar = () => {
@@ -48,9 +55,31 @@ import {
         onKeyDown={toggleDrawer(anchor, false)}
       >
       <Grid container className={classes.list}  >
-        <Button color="secondary" ><span style={{ letterSpacing: 5, marginBottom:20}}><a href="#about" className={classes.links}>About</a></span></Button>
-        <Button color="secondary"><span style={{ letterSpacing: 5, marginBottom:20}}><a href="#work" className={classes.links}>Work</a></span></Button>
-        <Button color="secondary"><span style={{ letterSpacing: 5, marginBottom:20}}><a href="#contact" className={classes.links}>Contact</a></span></Button>
+        <a href="#about" className={classes.links}>
+            <Button color="secondary" >
+            <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700}}>
+                        About
+                          <hr className={classes.underline}/>
+                        </Typography>
+            </Button>
+          </a>
+          <a href="#work" className={classes.links}>
+            <Button color="secondary">
+            <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700}}>
+                        Work
+                          <hr className={classes.underline}/>
+                        </Typography>
+            </Button>
+          </a>
+          <a href="#contact" className={classes.links}>
+            <Button color="secondary">
+            <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700}}>
+                        Contact
+                          <hr className={classes.underline}/>
+                        </Typography>
+            </Button>
+          </a>
+        
       </Grid>
       </div>
     );
@@ -62,7 +91,7 @@ import {
           aria-label="menu"
           onClick={toggleDrawer("right", true)}
         >
-            M
+            <MenuIcon/>
         </IconButton>
   
         <Drawer

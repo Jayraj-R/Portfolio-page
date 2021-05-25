@@ -6,28 +6,34 @@ import { Controller, Scene } from "react-scrollmagic";
 
 const useStyles = makeStyles({
     graph:{
-        display:"flex"
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"left",
+        padding:"0em 0em",
     },
     outerBar:{
         position:"relative",
         width:"100%",
-        height:"auto",
-        background:"white",
-        margin:"0em 0em"
+        height:"2.2em",
+        marginLeft:"0.5em",
     },
     innerBar:{
         position:"absolute",
         background:"#605F5D",
-        width:"50%",
         left:"0px",
-        height:"1em",
+        height:"1.4em",
         textAlign:"right",
-        padding:"0.3em 1em",
+        padding:"0.4em 1em",
         color:"#FEF9EE",
-        borderRadius:"0px 20px 20px 0px"
+        borderRadius:"0px 20px 20px 0px",
+        
     },
     titles:{
-        margin:"0.5em 0.5em 0.5em 0em"
+        margin:"0.5em 0em",
+    },
+    percentage:{
+        position:"relative",
+        top:-1
     }
   });
   
@@ -36,41 +42,33 @@ const useStyles = makeStyles({
   
     return (
         <div>
-            <section className={classes.graph}>
-                <Grid className={classes.titles} items xs={2}>
+             <section className={classes.graph}>
+                <Grid className={classes.titles} items xs={3} container justify="center" alignItems="center"> 
                     <Controller>
                         <Scene
-                            indicators={true}
+                            indicators={false}
                             reverse={true}
                             duration={50}
-                            offset={-80}
+                            offset={-110}
                         >
                             <Tween
                                 staggerFrom={{opacity:0}}
                                 staggerTo={{opacity:1}}
                                 stagger={1}
                             >
-                                <div>
+                                <Typography variant="subtitle1" style={{fontFamily: 'Roboto',fontWeight:400,lineHeight:"1.2em"}}>
                                     {props.name}
-                                </div>
+                                </Typography>
                             </Tween>
                         </Scene>
                     </Controller>
-                
-                
-                
-                
-                    
                 </Grid>
-                
-                
-                
-                
-                
-                <Grid items xs={10}>
+
+
+                <Grid items xs={7}>
                     <Controller>
                         <Scene
-                            indicators={true}
+                            indicators={false}
                             reverse={true}
                             duration={50}
                             offset={-80}
@@ -80,9 +78,9 @@ const useStyles = makeStyles({
                                 staggerTo={{ transform: "scaleX(1)", transformOrigin:"left"}}
                                 stagger={1}
                             >
-                                <div className={classes.outerBar}>
+                                <Typography variant="subtitle2" className={classes.outerBar}>
                                     <span className={classes.innerBar} style={{width:props.progress}}>{props.progress}</span>
-                                </div>
+                                </Typography>
                             </Tween>
                         </Scene>
                     </Controller>

@@ -9,7 +9,8 @@ const useStyles = makeStyles({
     position:"relative",
     zIndex:1,
     height:"auto",
-    transitionTimingFunction: "ease-in-out"
+    transitionTimingFunction: "ease-in-out",
+    padding:"1.2em"
   }
 });
 
@@ -21,7 +22,7 @@ const AboutContent = () => {
         <div>
             <Controller>
                 <Scene
-                    indicators={true}
+                    indicators={false}
                     reverse={true}
                     duration={50}
                     offset={-80}
@@ -31,8 +32,8 @@ const AboutContent = () => {
                         staggerTo={{ transform: "scale(1)", opacity:1}}
                         stagger={1}
                     >
-                        <Typography className={classes.fewWords}  variant="h6">
-                        A versatile Front-end Developer enthusiast with intermediate experience of designing, developing, and managing complex and flat websites and their internal framework. Specializes in ReactJs and responsive design.
+                        <Typography className={classes.fewWords}  variant="h6" style={{fontFamily: 'Roboto',fontWeight:400}}>
+                            A versatile Front-end Developer enthusiast with intermediate experience of designing, developing, and managing complex/flat websites and their internal framework. Specializes in ReactJs and responsive design.
                         </Typography>
                     </Tween>
                 </Scene>

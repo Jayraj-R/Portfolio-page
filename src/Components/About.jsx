@@ -9,19 +9,21 @@ import AboutQuote from "./AboutQuote";
 const useStyles = makeStyles({
   about: {
     position: "relative",
-    zIndex: "3"
+    zIndex: "3",
+    backgroundColor: "#FEF9EE",
+  },
+  header:{
   },
   underline:{
     position:"relative",
-    top:-40,
+    top:-35,
     marginBottom:-10,
-    backgroundColor:"red",
+    backgroundColor:"#00C9A9",
     border: "none",
     height:"2px"
   },
   aboutContent:{
-    
-    padding: "5em 0 2em 0"
+    marginTop: "3em"
   },
   fewWords:{
     backgroundColor:"#FEF9EE",
@@ -31,8 +33,11 @@ const useStyles = makeStyles({
     transitionTimingFunction: "ease-in-out"
   },
   quote:{
-    margin:"6em 0em",
+    marginTop:"4em",
     
+  },
+  skills:{
+    padding:"0em 10px",
   }
 });
 
@@ -43,32 +48,33 @@ const About = () => {
     {
       id:"1",
       name:"ReactJs",
-      progress:"65%"
+      progress:"75%"
     },
     {
-      id:"1",
+      id:"2",
       name:"HTML-CSS-JS",
-      progress:"80%"
+      progress:"85%"
     },
     {
-      id:"1",
-      name:"UI/UX Design",
-      progress:"50%"
-    },
-    {
-      id:"4",
+      id:"3",
       name:"MongoDB",
       progress:"60%"
     },
+    {
+      id:"4",
+      name:"UI/UX Design",
+      progress:"50%"
+    },
+    
 
   ]
 
   return (
-    <div className={classes.about}>
+    <Grid  xs={12} className={classes.about}>
       <Grid container xs={12} justify="center" align="center">
         <Controller>
           <Scene
-            indicators={true}
+            indicators={false}
             reverse={true}
             duration={250}
             offset={-150}
@@ -78,14 +84,14 @@ const About = () => {
               staggerTo={{  visibility: "visible", opacity: 1 }}
               stagger={1}
             >
-              <Typography  variant="h2" style={{ letterSpacing: 5}}>
+              <Typography className={classes.header} variant="h1" style={{fontFamily: 'Montserrat', fontWeight:700}}>
                 About
               </Typography>
                 
               {/* Underline */}
               <Controller>
                 <Scene
-                  indicators={true}
+                  indicators={false}
                   reverse={true}
                   duration={80}
                   offset={-140}
@@ -95,7 +101,7 @@ const About = () => {
                     staggerTo={{ transform: "scale(1)" }}
                     stagger={1}
                   >
-                    <Typography className={classes.aboutTitle} variant="h2" style={{ letterSpacing: 5}}>
+                    <Typography className={classes.aboutTitle} variant="h2">
                       <hr className={classes.underline}/> 
                     </Typography>
                   </Tween>
@@ -111,10 +117,10 @@ const About = () => {
 
 
       <Grid className={classes.aboutContent} container xs={12} alignSelf="center" justify="space-around" alignItems="center">
-        <Grid className={classes.fewWords} xs={12} sm={5}>
+        <Grid className={classes.fewWords} xs={12} lg={5}>
           <AboutContent/>
         </Grid>
-        <Grid className={classes.skills} xs={12} sm={5}>
+        <Grid className={classes.skills} xs={12} lg={5}>
           {skills.map(skill =>
               <AboutGraph
                 name={skill.name}
@@ -131,7 +137,7 @@ const About = () => {
       </Grid>
 
       
-    </div>
+    </Grid>
   );
 };
 export default About;
