@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f2ac2d40f686591082b537d0dc5b66c",
+    "revision": "95eeda5c1e2825c0da600a6a4c20919b",
     "url": "/Portfolio-page/index.html"
   },
   {
-    "revision": "5d841f4f0805ade8bca4",
+    "revision": "7049861a44f6d882e2c2",
     "url": "/Portfolio-page/static/css/main.95be32b7.chunk.css"
   },
   {
-    "revision": "a16d5069565a3d457a7c",
-    "url": "/Portfolio-page/static/js/2.5c42b9c7.chunk.js"
+    "revision": "aca5b047ba06ef12a4ce",
+    "url": "/Portfolio-page/static/js/2.cea13f73.chunk.js"
   },
   {
-    "revision": "ab896427e83f94309510",
-    "url": "/Portfolio-page/static/js/3.82bcce39.chunk.js"
+    "revision": "dc7406eaf298f1a11032",
+    "url": "/Portfolio-page/static/js/3.11eae34c.chunk.js"
   },
   {
-    "revision": "5d841f4f0805ade8bca4",
-    "url": "/Portfolio-page/static/js/main.cec9f650.chunk.js"
+    "revision": "7049861a44f6d882e2c2",
+    "url": "/Portfolio-page/static/js/main.50770faf.chunk.js"
   },
   {
-    "revision": "26f902d4ae0fece9cff6",
-    "url": "/Portfolio-page/static/js/runtime~main.6e14b033.js"
+    "revision": "4a239d95692d3ab0859d",
+    "url": "/Portfolio-page/static/js/runtime~main.8a5a2278.js"
+  },
+  {
+    "revision": "ff41d9d4a1bdb77ca87e0cdc5e510bd2",
+    "url": "/Portfolio-page/static/media/JayrajRathodResume.ff41d9d4.pdf"
   },
   {
     "revision": "d32f94727a499dc3803563dabe284840",
