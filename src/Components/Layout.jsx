@@ -58,7 +58,9 @@ const Layout = () => {
 
 
                 {/* curve svg */}
-                <div xs={12} container className="mobile-curve"><a name="start"/></div>
+                <div xs={12} container className="mobile-curve">
+                    <a name="start"/>
+                </div>
                 <Grid container className="layout" xs={12}>
                     <Grid item xs={12}>
                     <div className="svg-container">
@@ -96,7 +98,7 @@ const Layout = () => {
                             
                         <Grid xs={12} container direction="row" justify="center" alignItems="center">
                             <Typography variant="h5"  color="error" className="download-btn " >
-                                <a href='../resumeJayrajRathod.docx' download>
+                                <a href='../JayrajRathodResume.pdf' download>
                                     <Button style={{fontFamily: 'Montserrat', fontWeight:700}} variant="outlined" color="secondary" endIcon={<ArrowDownwardIcon/>}>
                                         Resume
                                     </Button>

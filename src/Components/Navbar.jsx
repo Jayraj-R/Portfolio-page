@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   },
   links:{
     textDecoration: "none",
-    color:"#FEF9EE"
+    color:"#FEF9EE",
   },
   logo:{
     position:"relative",
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <Grid className={classes.navbarButton} justify="flex-end">
                     <a href="#about" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700}}>
+                        <Typography variant="subtitle1" style={{ letterSpacing: 3, fontWeight:700,fontSize:"1.3em"}}>
                         About
                           <hr className={classes.underline}/>
                         </Typography>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                     <a href="#work" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <Typography style={{ letterSpacing: 3, fontWeight:700}}>
+                        <Typography style={{ letterSpacing: 3, fontWeight:700,fontSize:"1.3em"}}>
                         Work
                           <hr className={classes.underline}/>
                         </Typography>
@@ -88,7 +88,7 @@ const Navbar = () => {
 
                     <a href="#contact" className={classes.links}>
                       <Button className={classes.button} color="secondary">
-                        <Typography style={{ letterSpacing: 3, fontWeight:700}}>
+                        <Typography style={{ letterSpacing: 3, fontWeight:700,fontSize:"1.3em"}}>
                         Contact
                           <hr className={classes.underline}/>
                         </Typography>
