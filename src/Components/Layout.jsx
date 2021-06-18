@@ -6,6 +6,7 @@ import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import FileSaver from 'file-saver';
 
 const Layout = () => {
     const theme = createMuiTheme({
@@ -49,6 +50,13 @@ const Layout = () => {
         ticking = true;
         });
     });
+
+    const saveFile = () => {
+        FileSaver.saveAs(
+          process.env.REACT_APP_CLIENT_URL + "./JayrajRathodResume.pdf",
+          "JayrajRathodResume.pdf"
+        ); 
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -98,11 +106,9 @@ const Layout = () => {
                             
                         <Grid xs={12} container direction="row" justify="center" alignItems="center">
                             <Typography variant="h5"  color="error" className="download-btn " >
-                                <a href='../JayrajRathodResume.pdf' download>
-                                    <Button style={{fontFamily: 'Montserrat', fontWeight:700}} variant="outlined" color="secondary" endIcon={<ArrowDownwardIcon/>}>
+                                    <Button onClick={saveFile} style={{fontFamily: 'Montserrat', fontWeight:700}} variant="outlined" color="secondary" endIcon={<ArrowDownwardIcon/>}>
                                         Resume
                                     </Button>
-                                </a>
                             </Typography>
                         </Grid>
                     </Grid>

@@ -6,6 +6,7 @@ import WorkProjects from './WorkProjects';
 import phc from '../media/phc.jpg'
 import weather from '../media/weather.jpg'
 import ttt from '../media/ttt.png'
+import invoice from '../media/invoice.jpg'
 import jaz from '../media/jaz.png'
 
 const useStyles = makeStyles({
@@ -53,11 +54,18 @@ const useStyles = makeStyles({
         },
         {
             id:4,
+            title:"Invoice Generator",
+            caption:"Web application to create, manage and share invoices.",
+            src:invoice,
+            link:"https://jayraj-r.github.io/Invoice-Generator/"
+        },        
+        {
+            id:5,
             title:"Tic Tac Toe",
             caption:"A single player classic Tic-Tac-Toe game simulation. Make a triplet to win.",
             src:ttt,
             link:"https://jayraj-r.github.io/TicTacToe/"
-        }
+        },
     ]
   
     return (
